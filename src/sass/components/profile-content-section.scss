@@ -1,4 +1,4 @@
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   .profile_main-content {
     width: 772px;
     display: -webkit-box;
@@ -8,7 +8,7 @@
     margin-bottom: 346px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media (min-width: 1280px) {
     margin-bottom: 62px;
   }
 }
@@ -32,7 +32,7 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   .profile_content-posts {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -43,7 +43,7 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   .profile_content-post,
   .profile_content-post--shared {
     width: 374px;
