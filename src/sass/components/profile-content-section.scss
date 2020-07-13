@@ -1,56 +1,171 @@
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
+@media screen and (min-width: 1280px) {
+  .profile_main-content {
+    width: 772px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    margin-bottom: 346px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 62px;
+  }
 }
 
-.switch input {
-  display: none;
+%profie-post {
+  width: 310px;
+  background: #ffffff;
+  mix-blend-mode: normal;
+  -webkit-box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 14px;
+  padding: 0 24px 24px 24px;
+  margin-bottom: 24px;
 }
 
-.slider {
-  position: absolute;
+.profile_content-post {
+  @extend %profie-post;
+
+  &--shared {
+    @extend %profie-post;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .profile_content-posts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 772px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .profile_content-post,
+  .profile_content-post--shared {
+    width: 374px;
+  }
+
+  .profile_content-post:nth-child(odd) {
+    margin-right: 24px;
+  }
+
+  .profile_content-post--shared:nth-child(odd) {
+    margin-right: 24px;
+  }
+}
+
+.content-post_title {
+  font-family: $montserrat;
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 44px;
+  padding-top: 56px;
+  display: block;
+}
+
+.content-post_title--shared {
+  padding-top: 0;
+}
+
+.content-post_description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.content-post_description-name {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #b2b3bb;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+}
+
+.content-post_description-share {
+  font-size: 18px;
+  line-height: 25px;
+  color: $red-font-color;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
 
-.slider:before {
-  position: absolute;
-  content: '';
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: #ffffff;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+.content-post_shared-info {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  display: inline-block;
+  margin-bottom: 8px;
+  padding-top: 24px;
 }
 
-input:checked + .slider {
-  background-color: $red-font-color;
+.shared-to-info {
+  font-weight: 600;
+  font-size: 16px;
+  background: #ecf1f8;
+  border-radius: 6px;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px $red-font-color;
+.group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  &::before {
+    content: url(images/icons/group.svg);
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding-bottom: 20px;
+    margin-right: 5px;
+  }
 }
 
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+.content-post_description-stat {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  margin-right: 16px;
+
+  &::before {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    padding-bottom: 20px;
+    margin-right: 4px;
+  }
 }
 
-.slider.round {
-  border-radius: 34px;
+.views::before {
+  content: url(images/icons/views.svg);
 }
 
-.slider.round:before {
-  border-radius: 50%;
+.likes::before {
+  content: url(images/icons/like.svg);
 }

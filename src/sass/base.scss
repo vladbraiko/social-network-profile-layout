@@ -1,17 +1,28 @@
 .container {
   width: 320px;
   margin: 0 auto;
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-  }
+  padding: 0 5px 0 5px;
 
   @media screen and (min-width: 1280px) {
-    width: 1280px;
+    width: 1175px;
+    padding: 0;
   }
 }
 
 body {
   font-family: $open-sans;
   color: $primary-font-color;
+  font-weight: 400;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
 }

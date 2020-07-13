@@ -1,7 +1,9 @@
-@import './sass/normalize.scss';
-@import './sass/variables.scss';
-@import './sass/base.scss';
+@import "./sass/normalize.scss";
+@import "./sass/variables.scss";
+@import "./sass/base.scss";
 
 // components
-@import './sass/components/header.scss';
-@import './sass/components/profile-content-section.scss';
+@import "./sass/components/header.scss";
+@import "./sass/components/profile-user-section.scss";
+@import "./sass/components/profile-toggle-section.scss";
+@import "./sass/components/profile-content-section.scss";

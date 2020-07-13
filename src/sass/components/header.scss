@@ -1,46 +1,79 @@
 .header {
   position: relative;
-  height: 110px;
+  min-height: 142px;
+  -webkit-box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06);
   box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06);
   text-align: center;
-  padding: 10px;
+  padding: 10px 0 0 0;
+
+  @media screen and (min-width: 1280px) {
+    min-height: 112px;
+    padding: 24px 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header_head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
 }
 
 .header_logo {
-  width: 50px;
   padding: 10px;
+
+  @media screen and (min-width: 1280px) {
+    padding: 0;
+  }
 }
 
 .header_profile {
-  width: 290px;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 0 auto;
   margin-bottom: 17px;
+
+  @media screen and (min-width: 1280px) {
+    margin: 0;
+  }
 }
 
 .header_profile-name {
   font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 20px;
   letter-spacing: -0.5px;
-  margin-right: 14px;
+  margin-right: 20px;
 }
 
 .header_profile-avatar {
-  width: 20px;
-  margin-right: 10px;
+  width: 35px;
+  margin-right: 16px;
 }
 
 .header_profile-avatar--menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-right: 21px;
 
   &::after {
     content: url(images/icons/arrow.svg);
     display: inline-block;
-    line-height: 12px;
+    line-height: 30px;
     opacity: 0.6;
     cursor: pointer;
   }
@@ -48,12 +81,15 @@
 
 .header_profile-icon {
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 22px 22px;
   vertical-align: middle;
+
+  @media screen and (min-width: 1280px) {
+    background-size: 32px 32px;
+  }
 }
 
 .bell {
@@ -70,13 +106,21 @@
 
 .navigation {
   width: 261px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   list-style: none;
   text-transform: uppercase;
-  font-size: 10px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 19px;
   margin: 0 auto;
+
+  @media screen and (min-width: 1280px) {
+    margin: 0;
+  }
 }
 
 .navigation_item {
@@ -88,12 +132,17 @@
   &::after {
     display: block;
     height: 3px;
+    background: -o-linear-gradient(276.71deg, #ff974f 0%, #e32c75 100%);
     background: linear-gradient(173.29deg, #ff974f 0%, #e32c75 100%);
     margin: 10px 0 auto;
+
+    @media screen and (min-width: 1280px) {
+      margin: 19px 0 auto;
+    }
   }
 
   &:hover::after {
-    content: '';
+    content: "";
   }
 
   &:hover {
@@ -104,13 +153,24 @@
 .header_add-button {
   position: absolute;
   top: 88%;
-  right: 26%;
+  right: 2%;
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  background: -o-linear-gradient(315deg, #ff974f 0%, #e32c75 100%);
   background: linear-gradient(135deg, #ff974f 0%, #e32c75 100%);
   font-size: 24px;
   font-weight: 300;
   color: #ffffff;
   line-height: 31px;
+  cursor: pointer;
+
+  @media screen and (min-width: 1280px) {
+    width: 64px;
+    height: 64px;
+    font-size: 54px;
+    line-height: 60px;
+    top: 71%;
+    right: 10%;
+  }
 }
